@@ -32,7 +32,7 @@ Este guia oferece instruções passo a passo para configurar e executar a análi
    ```bash
    docker run --rm --network=host \
    -e SONAR_HOST_URL="http://127.0.0.1:9000" \
-   -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=chalk -Dsonar.sources=." \
+   -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=${key} -Dsonar.sources=." \
    -e SONAR_TOKEN="seu_token_de_acesso" \
    -v "${YOUR_REPO_PATH}:/usr/src" \
    sonarsource/sonar-scanner-cli
